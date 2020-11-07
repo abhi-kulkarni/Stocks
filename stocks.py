@@ -112,7 +112,7 @@ service = discovery.build('sheets', 'v4', credentials=credentials)
 
 spreadsheetId = os.getenv("SPREADSHEET_ID")
 sheet_name = sys.argv[3]
-sheetId = os.getenv("SHEET_ID_1") if sheet_name == '1' else os.getenv("SHEET_ID_2")
+sheetId = os.getenv("SHEET_ID_1") if sheet_name == 'Sheet1' else os.getenv("SHEET_ID_2")
 
 range_ = sheet_name+"!A:A1"
 curr_date = datetime.datetime.now().strftime('%d/%m/%Y')
